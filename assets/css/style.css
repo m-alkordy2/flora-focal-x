@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+nav {
+    height: 90px;
+    width: 100vw;
+    padding: 0 70px;
+    background-color: #EFF8FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        li {
+            cursor: pointer;
+            font-family: Inter;
+            font-weight: 500;
+            color: #222222;
+        }
+    }
+    .login {
+        width: 135px;
+        height: 38px;
+        background-color: #025595;
+        color: #F5F5F5;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .bars-icon {
+        border: none;
+        background: none;
+        display: none;
+    }
+}
+
+.hero {
+    height: 100vh;
+    background-color: #EFF8FF;
+    position: relative;
+    padding: 122px 0;
+    .background {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    h1 {
+        max-width: 549px;
+        margin-left: 70px;
+        color: #222222;
+        font-size: 60px;
+        line-height: 80px;
+    }
+    .description {
+        max-width: 423px;
+        line-height: 26px;
+        color: #22222280;
+        margin: 20px 70px 50px;
+    }
+
+    .info {
+        max-width: 868px;
+        min-height: 100px;
+        padding: 0 58px;
+        background-color: #ffffff89;
+        margin-left: 70px;
+        border-radius: 16px;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        backdrop-filter: blur(16px) ;
+
+        .card {
+            display: flex;
+            align-items: center;
+            gap : 20px ;
+
+            .icon {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: #02559554;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h2 {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: #222222;
+                margin-bottom: 10px;
+            }
+            p{
+                line-height: 24px;
+                color: #22222280;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 992px) {
+    nav {
+        padding: 0 20px;
+        .logo {
+            width: 46px;
+        }
+        ul , .login {
+            display: none;
+        }
+        .bars-icon {
+            display: block;
+        }
+    }
+
+    .hero {
+        h1 {
+            font-size: 35px;
+            line-height: 46px;
+            margin: 0 20px;
+        }
+        .description {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .info {
+            margin: 0;
+            padding: 20px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
